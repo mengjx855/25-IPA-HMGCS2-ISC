@@ -3,7 +3,7 @@ setwd('F:/project/20240731_PR_IBD_IPA_ZhangYN/Code-Data-available/git/Figure3/')
 pacman::p_load(tidyverse, openxlsx, ggpubr)
 source('/Code/R_func/profile_process.R')
 
-#### info ####
+#### Figures 3b, 3d and S3b ####
 group <- read.xlsx('RNASeq_data.xlsx', sheet = 'group')
 
 rc <- read.xlsx('RNASeq_data.xlsx', sheet = 'rc') %>% 
@@ -12,7 +12,6 @@ rc <- read.xlsx('RNASeq_data.xlsx', sheet = 'rc') %>%
 fpkm <- read.xlsx("RNASeq_data.xlsx", sheet = 'fpkm') %>% 
   column_to_rownames('name')
 
-#### Figures 3b, 3d and S3b ####
 markers <- list(
   aISC = c("Lgr5","Ascl2",'Slc12a2'),
   rISC = c("Hopx","Bmi1",'Lrig1'),
